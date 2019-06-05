@@ -88,6 +88,7 @@ with tf.Session() as sess:
     display_every = 2
     num_training_iter = 50
 
+    
     # calculate the number of lines to animation
     fit_num_plots = math.floor(num_training_iter/display_every)
     # add storage of factor and offset values from each epoch
@@ -157,7 +158,7 @@ with tf.Session() as sess:
         line.set_xdata(train_house_size_norm * train_house_size_std + train_house_size_mean)  # update the data
         line.set_ydata((fit_size_factor[i] * train_house_size_norm + fit_price_offsets[i]) * train_price_std + train_price_mean)  # update the data
         return line,
- 
+    
      # Init only required for blitting to give a clean slate.
     def initAnim():
         line.set_ydata(np.zeros(shape=house_price.shape[0])) # set y's to 0
