@@ -349,7 +349,7 @@ for i in range(num_steps):
 # Display summary
 
 #       Time to train
-
+  
 end_time = time.time()
 
 print('Total training time for {0} batches: {1:.2f} seconds'.format(i + 1, end_time - start_time))
